@@ -3,7 +3,19 @@
     <title>Tara's Blog</title>
   </head>
   <body>
+  <div>
+    <h1>Tara the amazing!</h1>
+    <h2>and Moo the cat</h2>
+  </div>
     <p>Hi There!</p>
     <p>It Works!</p>
+    <p>This is so frustrating! <strong>BUT IT KINDA WORKS?!</strong></p>
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
